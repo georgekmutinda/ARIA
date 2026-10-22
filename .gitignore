@@ -1,0 +1,19 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Secret configuration files
+.env
+.env.*
+!.env.example
+
+# Local data and log files
+*.log
+*.txt
+!aria_chunk_e2e.txt
+
+# OS database artifacts
+.DS_Store
+Thumbs.db

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Solutions Architect Roadmap</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0f0f0f;color:#e0e0e0;padding:20px;line-height:1.5}
+h1{font-size:22px;font-weight:600;margin-bottom:4px}
+.sub{font-size:13px;color:#888;margin-bottom:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.stat{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:10px;padding:12px;text-align:center}
+.stat-n{font-size:22px;font-weight:600;color:#fff}
+.stat-l{font-size:11px;color:#666;margin-top:2px}
+.flow{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:18px;padding:12px;background:#1a1a1a;border-radius:10px;border:1px solid #2a2a2a}
+.fs{font-size:11px;padding:4px 9px;border-radius:20px;background:#252525;border:1px solid #333;color:#ccc}
+.fa{font-size:11px;color:#555}
+.nav{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+.nav button{font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid #333;background:#1a1a1a;color:#888;cursor:pointer;transition:.15s}
+.nav button:hover{background:#252525;color:#ccc}
+.nav button.active{background:#e0e0e0;color:#0f0f0f;border-color:#e0e0e0}
+.card{border:1px solid #2a2a2a;border-radius:12px;margin-bottom:10px;overflow:hidden}
+.ch{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;background:#1a1a1a;border-bottom:1px solid #2a2a2a}
+.ch:hover{background:#1f1f1f}
+.badge{font-size:11px;font-weight:500;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.ct{font-size:14px;font-weight:500;flex:1;color:#e0e0e0}
+.cm{font-size:11px;color:#555}
+.cv{font-size:12px;color:#555;transition:transform .2s}
+.cv.open{transform:rotate(180deg)}
+.cb{padding:16px;display:none}
+.cb.open{display:block}
+.sl{font-size:10px;font-weight:600;color:#555;text-transform:uppercase;letter-spacing:.07em;margin:14px 0 7px}
+.sl:first-child{margin-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.tag{font-size:11px;padding:2px 8px;border-radius:20px;border:1px solid #2a2a2a;color:#888;background:#1a1a1a}
+.tool{background:#0d1f36;color:#5ba3f5;border-color:transparent}
+.ms{background:#0d2a1a;color:#4caf78;border-color:transparent}
+.paper{background:#2a1f0d;color:#e0a060;border-color:transparent}
+.warn{background:#2a0d0d;color:#e06060;border-color:transparent}
+.rag{background:#2a1a0a;color:#d4844a;border-color:transparent}
+.cloud{background:#0a1a2a;color:#4a90d4;border-color:transparent}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:7px;margin:7px 0}
+.cell{border:1px solid #2a2a2a;border-radius:8px;padding:9px 11px;background:#1a1a1a}
+.cl{font-size:10px;color:#555;margin-bottom:3px;font-weight:600}
+.cx{font-size:11px;color:#888;line-height:1.5}
+.cap{border-left:3px solid #4caf78;border-radius:0 8px 8px 0;padding:9px 13px;margin-top:12px;background:#0d1f13;font-size:12px;color:#4caf78;line-height:1.6}
+.pit{border-left:3px solid #e06060;border-radius:0 8px 8px 0;padding:9px 13px;margin:7px 0;background:#1f0d0d;font-size:12px;color:#e06060;line-height:1.6}
+.ri{border-left:3px solid #e0904a;border-radius:0 8px 8px 0;padding:9px 13px;margin:7px 0;background:#1f130a;font-size:12px;color:#c97a35;line-height:1.6}
+.ci{border-left:3px solid #4a90d4;border-radius:0 8px 8px 0;padding:9px 13px;margin:7px 0;background:#0a1320;font-size:12px;color:#4a90d4;line-height:1.6}
+.p{font-size:12px;color:#888;line-height:1.6;margin-bottom:8px}
+code{font-family:monospace;font-size:11px;background:#1a1a1a;padding:1px 5px;border-radius:4px;color:#c9a96e}
+pre{font-family:monospace;font-size:11px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:11px 13px;margin:7px 0;line-height:1.7;color:#888;overflow-x:auto;white-space:pre}
+@media(max-width:500px){.stats{grid-template-columns:repeat(2,1fr)}.flow{gap:3px}}
+</style>
+</head>
+<body>
+
+<h1>AI Solutions Architect — Restructured Roadmap</h1>
+<div class="sub">18–24 months · .NET background · Cloud compute · Production RAG + Cloud Infra + Agents + Security · Easy → Complex</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">9</div><div class="stat-l">Phases</div></div>
+  <div class="stat"><div class="stat-n">24</div><div class="stat-l">Months</div></div>
+  <div class="stat"><div class="stat-n">3</div><div class="stat-l">New phases added</div></div>
+  <div class="stat"><div class="stat-n">ARIA</div><div class="stat-l">Evolving capstone</div></div>
+</div>
+
+<div class="sl">Learning flow — easy → complex</div>
+<div class="flow">
+  <span class="fs">🐍 Python</span><span class="fa">→</span>
+  <span class="fs">🧮 ML Math</span><span class="fa">→</span>
+  <span class="fs">🤖 LLM + Demo RAG</span><span class="fa">→</span>
+  <span class="fs">🏭 Production RAG</span><span class="fa">→</span>
+  <span class="fs">☁️ Cloud Infra</span><span class="fa">→</span>
+  <span class="fs">🤝 Agents</span><span class="fa">→</span>
+  <span class="fs">⚙️ MLOps</span><span class="fa">→</span>
+  <span class="fs">🔒 Security</span><span class="fa">→</span>
+  <span class="fs">🏛️ Architecture</span>
+</div>
+
+<div class="nav" id="nav">
+  <button class="active" onclick="show('all',this)">All</button>
+  <button onclick="show('p0',this)">P0 · Python</button>
+  <button onclick="show('p1',this)">P1 · ML Math</button>
+  <button onclick="show('p2',this)">P2 · LLM+RAG Demo</button>
+  <button onclick="show('p3',this)">P3 · Prod RAG ★</button>
+  <button onclick="show('p4',this)">P4 · Cloud ★</button>
+  <button onclick="show('p5',this)">P5 · Agents</button>
+  <button onclick="show('p6',this)">P6 · MLOps</button>
+  <button onclick="show('p7',this)">P7 · Security</button>
+  <button onclick="show('p8',this)">P8 · Architect</button>
+</div>
+
+<!-- P0 -->
+<div class="card" data-p="p0">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#1e1b4b;color:#a5b4fc">Phase 0</span>
+    <span class="ct">Python & Developer Environment</span>
+    <span class="cm">Months 1–2</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">Unchanged from original plan. Your entry point: relearn Python as a working engineer using your .NET intuition. Set up cloud compute. Plant the ARIA seed.</p>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">Python vs .NET mental map</span><span class="tag">NumPy / Pandas</span><span class="tag">PyTorch tensors + autograd</span><span class="tag">Google Colab + Kaggle</span><span class="tag">FastAPI microservice</span><span class="tag">Async Python</span><span class="tag">Docker basics</span><span class="tag">GitHub portfolio setup</span>
+    </div>
+    <div class="sl">.NET → Python quick map</div>
+    <pre>C# List&lt;T&gt;           → Python list (no generics)
+C# Dictionary&lt;K,V&gt;   → Python dict
+C# LINQ .Where()      → [x for x in items if condition]
+C# async/await        → Python async/await (same concept)
+C# IEnumerable        → Python generator with yield
+NuGet                 → pip / pyproject.toml</pre>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–2</div><div class="cx">Python reorientation. Port a .NET utility to Python.</div></div>
+      <div class="cell"><div class="cl">Weeks 3–4</div><div class="cx">NumPy + Pandas. Real dataset pipeline. Visualise with matplotlib.</div></div>
+      <div class="cell"><div class="cl">Weeks 5–6</div><div class="cx">Colab + Kaggle setup. First PyTorch tensors. Autograd in 8 lines.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–8</div><div class="cx">FastAPI + Ollama = ARIA v0.0. Dockerise. GitHub push. CI green.</div></div>
+    </div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">Python 3.11</span><span class="tag tool">FastAPI + Uvicorn</span><span class="tag tool">Ollama (local CPU)</span><span class="tag tool">Docker</span><span class="tag tool">Google Colab</span><span class="tag tool">Git + GitHub</span><span class="tag tool">Weights & Biases (free)</span></div>
+    <div class="cap"><strong>ARIA v0.0:</strong> Dockerised FastAPI + Ollama. Endpoints: /health, /ask, /ask/batch. Structured logging. Pydantic validation. pytest suite. GitHub Actions CI green.</div>
+  </div>
+</div>
+
+<!-- P1 -->
+<div class="card" data-p="p1">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#052e16;color:#4ade80">Phase 1</span>
+    <span class="ct">ML Fundamentals — Deep Understanding</span>
+    <span class="cm">Months 3–5</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">Build the mental models that make every later phase click. The Instagram practitioner said it plainly: <em>"I jumped into code too quickly and wasted weeks. A solid understanding of embeddings, LLMs, prompting, and RAG saved me far more time than any framework."</em> This is that foundation.</p>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">Linear algebra as geometry</span><span class="tag">Gradient descent as hill descent</span><span class="tag">Backprop = chain rule in code</span><span class="tag">Loss surfaces + overfitting</span><span class="tag">CNNs — learned feature detectors</span><span class="tag">RNNs + vanishing gradient</span><span class="tag">Attention = soft lookup table</span><span class="tag">Embeddings = meaning as position in space</span><span class="tag">Tokenisation + BPE</span><span class="tag">Training loop anatomy</span>
+    </div>
+    <div class="sl">The training loop — memorise this</div>
+    <pre>for epoch in range(epochs):
+    for inputs, labels in dataloader:
+        preds = model(inputs)          # forward pass
+        loss  = criterion(preds, labels)
+        optimizer.zero_grad()          # clear old gradients
+        loss.backward()                # compute new gradients
+        optimizer.step()               # nudge weights downhill</pre>
+    <div class="sl">Papers to read (full)</div>
+    <div class="tags"><span class="tag paper">Attention Is All You Need (2017)</span><span class="tag paper">BERT (2018)</span><span class="tag paper">Word2Vec (2013)</span><span class="tag paper">Deep Residual Learning (2015)</span></div>
+    <div class="sl">Paper reading method</div>
+    <pre>Pass 1 (30 min):  title + abstract + all figures + conclusion
+Pass 2 (1 hr):    intro + method section, skip equations first
+Pass 3 (2 hr):    full paper, annotate every equation in plain English
+Implement:        code the core idea in &lt;100 lines → proof of understanding</pre>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">3B1B linear algebra series. Neural net from scratch in NumPy — no PyTorch.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">PyTorch. Manual backprop. Train CNN on CIFAR-10 on Colab T4.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–9</div><div class="cx">Attention from scratch. Read "Attention Is All You Need" fully. Mini-transformer.</div></div>
+      <div class="cell"><div class="cl">Weeks 10–12</div><div class="cx">Embeddings + tokenisation. Fine-tune BERT on classification task.</div></div>
+    </div>
+    <div class="sl">Free resources</div>
+    <div class="tags">
+      <span class="tag tool">3Blue1Brown: Neural Networks series (YouTube)</span>
+      <span class="tag tool">Andrej Karpathy: Zero to Hero (YouTube)</span>
+      <span class="tag tool">Stanford CS231n (free notes)</span>
+      <span class="tag tool">Dive into Deep Learning (d2l.ai)</span>
+    </div>
+    <div class="cap"><strong>ARIA v0.1:</strong> Add /classify (fine-tuned BERT) + /sentiment endpoints. W&B training run logged. Model card: training data, accuracy, known failure modes. .NET client calling Python service.</div>
+    <div class="pit"><strong>Pitfall:</strong> If you can't implement backprop from scratch, you will guess — not reason — when production models break. Do the NumPy exercise even if it feels slow.</div>
+  </div>
+</div>
+
+<!-- P2 -->
+<div class="card" data-p="p2">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#2a1800;color:#f59e0b">Phase 2</span>
+    <span class="ct">LLM Foundations & Your First RAG Demo</span>
+    <span class="cm">Months 6–8</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">Modern LLM architecture and your first working RAG system. Key practitioner insight: <em>build the same RAG project across multiple frameworks</em> to develop real intuition about tradeoffs that documentation never explains.</p>
+    <div class="ri"><strong>From production engineers:</strong> "Build the same project across multiple frameworks. At first it felt repetitive, but that comparison gave me intuition for tradeoffs you don't see in docs." Pick a project you'll actually use: a recipe assistant, API doc helper, or personal research bot. When you care about fixing bugs, you learn faster.</div>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">GPT architecture: decoder-only transformers</span><span class="tag">Autoregressive next-token prediction</span><span class="tag">Scaling laws: compute, data, params</span><span class="tag">Pre-training vs fine-tuning vs prompting</span><span class="tag">Instruction tuning</span><span class="tag">RAG: retrieval + generation pipeline</span><span class="tag">Vector databases: how similarity search works</span><span class="tag">Embeddings for semantic search</span><span class="tag">Fixed-size chunking (baseline)</span><span class="tag">Prompt engineering basics</span><span class="tag">Quantisation: INT4/INT8/GGUF</span><span class="tag">QLoRA fine-tuning</span><span class="tag">SLMs: Phi-3, Gemma, Mistral</span>
+    </div>
+    <div class="sl">RAG beginner stack</div>
+    <div class="tags">
+      <span class="tag rag">Qdrant (local first)</span><span class="tag rag">Pinecone (cloud)</span><span class="tag rag">OpenAI embeddings → Nomic (free)</span><span class="tag rag">Fixed chunking</span><span class="tag rag">Prompt engineering basics</span>
+    </div>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">LLM architecture deep dive. Build GPT-2 scale model with nanoGPT on Colab.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">First RAG: ingest docs → embed → Qdrant → retrieve → generate. Build /rag endpoint in ARIA.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–9</div><div class="cx">QLoRA fine-tune Mistral-7B on Colab. Deploy quantised model locally via Ollama.</div></div>
+      <div class="cell"><div class="cl">Weeks 10–12</div><div class="cx">Rebuild same RAG with LlamaIndex, then LangChain. Document tradeoffs in a comparison note.</div></div>
+    </div>
+    <div class="sl">Papers</div>
+    <div class="tags"><span class="tag paper">GPT-3 (Brown 2020)</span><span class="tag paper">RAG (Lewis 2020)</span><span class="tag paper">LoRA (Hu 2021)</span><span class="tag paper">Scaling Laws (Kaplan 2020)</span></div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">Ollama / llama.cpp</span><span class="tag tool">Qdrant</span><span class="tag tool">ChromaDB</span><span class="tag tool">sentence-transformers</span><span class="tag tool">LangChain</span><span class="tag tool">LlamaIndex</span><span class="tag tool">nanoGPT</span><span class="tag tool">Unsloth (fast Colab fine-tuning)</span><span class="tag tool">lm-evaluation-harness</span></div>
+    <div class="cap"><strong>ARIA v0.2:</strong> RAG pipeline ingesting PDFs into Qdrant. /rag endpoint. QLoRA fine-tuned Phi-3 mini on synthetic Q&A data. Basic evaluation metrics at /metrics.</div>
+  </div>
+</div>
+
+<!-- P3 PRODUCTION RAG -->
+<div class="card" data-p="p3">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#2a1000;color:#fb923c">Phase 3 ★ NEW</span>
+    <span class="ct">Production RAG Engineering</span>
+    <span class="cm">Months 9–12</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">The phase most AI courses skip entirely. Anyone can build a RAG demo. Building one that a healthcare firm, law firm, or financial institution relies on — with 20,000+ documents, compliance requirements, and messy real-world data — is what companies pay <strong>$50K–$200K+</strong> for. This phase is built from the direct experience of engineers who have done exactly that.</p>
+
+    <div class="ri"><strong>Why RAG isn't going away:</strong> Even 200K-token models choke after ~100–200 pages. Enterprise repositories are 1,000× bigger. Usable context is really ~120K before quality drops. Fine-tuning ≠ knowledge injection — it changes style, not content. You can teach terminology but can't inject 50K docs without catastrophic forgetting. Enterprises also need audit trails + real-time compliance — RAG solves this, fine-tuning doesn't.</div>
+
+    <div class="sl">1 — Document quality & data pipeline</div>
+    <div class="tags">
+      <span class="tag rag">OCR glitch detection</span><span class="tag rag">Missing text identification</span><span class="tag rag">Structural inconsistency detection</span><span class="tag rag">Duplicate detection (same doc, different format)</span><span class="tag rag">Garbage-in → garbage-out prevention</span><span class="tag rag">PII detection before ingestion</span>
+    </div>
+    <div class="ri"><strong>Real lesson:</strong> One enterprise client had half their repository duplicated with tiny format changes. Metadata architecture alone consumed ~40% of total dev time. This is where most engineers underestimate the work.</div>
+
+    <div class="sl">2 — Advanced chunking strategies</div>
+    <div class="tags">
+      <span class="tag rag">Fixed-size (baseline only)</span><span class="tag rag">Semantic chunking</span><span class="tag rag">Hierarchical chunking</span><span class="tag rag">Parent-child chunking</span><span class="tag rag">Query-adaptive chunking</span><span class="tag rag">Preserve document hierarchy</span>
+    </div>
+    <pre># Parent-child chunking pattern
+# Child  = small, precise chunk → better embedding + retrieval
+# Parent = larger context chunk → returned to LLM for answer
+# Why: small chunks embed better, large chunks answer better
+# Retrieve child, return parent</pre>
+
+    <div class="sl">3 — Metadata architecture</div>
+    <div class="tags">
+      <span class="tag rag">Classification schemas</span><span class="tag rag">Temporal tagging</span><span class="tag rag">Cross-document references</span><span class="tag rag">Domain tags (healthcare, legal, finance)</span><span class="tag rag">Hybrid retrieval: vector + BM25 keyword</span>
+    </div>
+
+    <div class="sl">4 — Evaluation & testing (most skipped, most critical)</div>
+    <div class="tags">
+      <span class="tag rag">Gold datasets — ground-truth Q&A pairs</span><span class="tag rag">Regression tests for retrieval</span><span class="tag rag">User feedback loops</span><span class="tag rag">RAGAS: faithfulness + answer relevance + context recall</span><span class="tag rag">Retrieval precision / recall</span>
+    </div>
+    <div class="pit"><strong>Pitfall:</strong> "Demos mean nothing if users can't trust results." Build evaluation from day one. When enterprise clients ask "how do you know it's right?" — you need a real answer, not "it feels good."</div>
+
+    <div class="sl">5 — Reliability under load</div>
+    <div class="tags">
+      <span class="tag rag">Concurrent search handling</span><span class="tag rag">Upload queues (Redis + Celery)</span><span class="tag rag">Circuit breakers</span><span class="tag rag">Retry logic with backoff</span><span class="tag rag">Rate limiting per tenant</span><span class="tag rag">Prometheus monitoring</span>
+    </div>
+    <div class="ri"><strong>Real lesson:</strong> One client's system collapsed under concurrent searches + ongoing document uploads with no queue. "Resilience matters more than features." Queue the uploads. Monitor everything.</div>
+
+    <div class="sl">6 — Domain messiness</div>
+    <div class="tags">
+      <span class="tag rag">Healthcare: medical jargon, ICD codes, HIPAA</span><span class="tag rag">Finance: financial filings, regulatory language</span><span class="tag rag">Legal: precedent structure, case citations</span><span class="tag rag">Domain-specific embedding models</span><span class="tag rag">Terminology injection techniques</span>
+    </div>
+
+    <div class="sl">7 — Enterprise security requirements</div>
+    <div class="tags">
+      <span class="tag rag">On-premise deployment support</span><span class="tag rag">Role-based access control (RBAC)</span><span class="tag rag">Immutable audit log per retrieval call</span><span class="tag rag">Data residency compliance</span><span class="tag rag">PII stripping before ingestion</span>
+    </div>
+    <div class="ri"><strong>Real lesson:</strong> "One law firm required every retrieval call to be logged immutably." This isn't optional in regulated industries — it's the contract requirement before they sign.</div>
+
+    <div class="sl">8 — Learn from real codebases</div>
+    <p class="p">Clone, read, break, modify, rebuild open-source RAG repos. Use Claude to generate architecture diagrams and trace workflows. Compare two projects solving the same problem differently — the comparison teaches tradeoffs no course can.</p>
+    <div class="tags">
+      <span class="tag tool">OpenDevin / AllHands (memory + orchestration)</span><span class="tag tool">Cline (different philosophy — compare)</span><span class="tag tool">RAGFlow (open source enterprise RAG)</span><span class="tag tool">Verba (Weaviate's RAG)</span>
+    </div>
+
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">Document pipeline: OCR detection, deduplication, metadata schema. Ingestion with quality gates.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">Advanced chunking: parent-child + semantic. RAGAS evaluation. Build gold dataset of 50+ Q&A pairs.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–9</div><div class="cx">Reliability: Redis/Celery upload queue, circuit breakers, Prometheus metrics dashboard.</div></div>
+      <div class="cell"><div class="cl">Weeks 10–12</div><div class="cx">Enterprise: RBAC, immutable audit log, PII detection. Study OpenDevin + Cline architecture.</div></div>
+    </div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">Qdrant</span><span class="tag tool">RAGAS</span><span class="tag tool">Redis + Celery</span><span class="tag tool">Unstructured.io</span><span class="tag tool">rank_bm25 (hybrid retrieval)</span><span class="tag tool">Prometheus</span><span class="tag tool">spaCy (PII / NER)</span></div>
+    <div class="cap"><strong>ARIA v1.0 — Production RAG:</strong> Enterprise-grade RAG with document quality detection, hierarchical chunking, metadata schemas, RAGAS evaluation suite, Redis upload queue, RBAC, and immutable audit log per retrieval. Handles 20K+ documents. Published benchmark report.</div>
+  </div>
+</div>
+
+<!-- P4 CLOUD -->
+<div class="card" data-p="p4">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#0a1a30;color:#60a5fa">Phase 4 ★ NEW</span>
+    <span class="ct">Cloud Infrastructure for AI</span>
+    <span class="cm">Months 12–15</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">You now have a production RAG system running locally. This phase moves it to the cloud and teaches you to operate AI workloads at scale. Cloud is the default deployment target for everything that follows — agents, MLOps, distributed training all require this foundation.</p>
+    <div class="ci"><strong>Why cloud comes before agents:</strong> Agents require cloud compute, GPU instances, managed Kubernetes, cloud storage, and scoped IAM. Building agents on local infrastructure produces habits you'll have to unlearn. Cloud first means every phase after this is built on real infrastructure.</div>
+
+    <div class="sl">1 — Cloud fundamentals (start with GCP — best free tier for AI)</div>
+    <div class="tags">
+      <span class="tag cloud">Regions, availability zones, VPCs</span><span class="tag cloud">Compute: EC2 / GCE / Azure VMs</span><span class="tag cloud">Storage: S3 / GCS / Azure Blob</span><span class="tag cloud">Networking: subnets, security groups, load balancers</span><span class="tag cloud">IAM: roles, policies, least privilege</span><span class="tag cloud">Billing alerts — set on day 1</span>
+    </div>
+    <div class="ci"><strong>GCP is recommended first:</strong> Free $300 credit, Colab already uses Google infrastructure, GKE Autopilot has a free tier, Vertex AI free quotas. Learn AWS second — it's the enterprise standard.</div>
+
+    <div class="sl">2 — Cloud GPU for AI</div>
+    <div class="tags">
+      <span class="tag cloud">GPU types: T4, A10G, A100, H100</span><span class="tag cloud">Spot / preemptible instances (60–90% cheaper)</span><span class="tag cloud">VRAM sizing per model</span><span class="tag cloud">Cost-per-inference calculation</span><span class="tag cloud">Colab → cloud GPU migration path</span>
+    </div>
+    <pre># GPU sizing intuition
+# Mistral-7B INT4  → ~4GB VRAM   → T4 (cheapest)
+# Mistral-7B FP16  → ~14GB VRAM  → A10G
+# Llama-70B FP16   → ~140GB VRAM → A100×2
+#
+# AWS g4dn.xlarge  (T4)  = $0.53/hr on-demand, $0.16/hr spot
+# Always right-size. Always use spot for training jobs.</pre>
+
+    <div class="sl">3 — Cloud storage for AI</div>
+    <div class="tags">
+      <span class="tag cloud">Model artifact storage (S3 / GCS)</span><span class="tag cloud">Dataset versioning</span><span class="tag cloud">Qdrant Cloud / Pinecone for vector DB</span><span class="tag cloud">Lifecycle policies (auto-archive old versions)</span><span class="tag cloud">Presigned URLs for secure model access</span>
+    </div>
+
+    <div class="sl">4 — Kubernetes for AI workloads</div>
+    <div class="tags">
+      <span class="tag cloud">K8s concepts: pods, deployments, services, ingress</span><span class="tag cloud">GPU node pools</span><span class="tag cloud">Horizontal Pod Autoscaler (HPA)</span><span class="tag cloud">Resource requests: CPU + GPU limits</span><span class="tag cloud">Persistent volumes for model weights</span><span class="tag cloud">Helm charts for AI services</span><span class="tag cloud">GKE Autopilot / EKS Fargate (managed)</span>
+    </div>
+    <div class="ci"><strong>Local K8s path:</strong> K3s or minikube locally → GKE Autopilot free tier → AWS EKS. Don't pay for managed K8s until you understand what you're running inside it.</div>
+
+    <div class="sl">5 — Serverless for AI</div>
+    <div class="tags">
+      <span class="tag cloud">Cloud Run / App Runner for containerised AI APIs</span><span class="tag cloud">Cloud Functions / Lambda for lightweight inference</span><span class="tag cloud">Event-driven document ingestion pipelines</span><span class="tag cloud">Cold start problem for large models</span><span class="tag cloud">Serverless vs always-on cost tradeoffs</span>
+    </div>
+
+    <div class="sl">6 — Infrastructure as Code</div>
+    <div class="tags">
+      <span class="tag cloud">Terraform fundamentals</span><span class="tag cloud">Define GPU instances, VPCs, storage as code</span><span class="tag cloud">Cloud provider modules</span><span class="tag cloud">State management</span><span class="tag cloud">CI/CD for infrastructure changes</span>
+    </div>
+
+    <div class="sl">7 — Cloud observability</div>
+    <div class="tags">
+      <span class="tag cloud">CloudWatch / Cloud Monitoring</span><span class="tag cloud">Centralised log aggregation</span><span class="tag cloud">GPU utilisation monitoring</span><span class="tag cloud">Cost dashboards + alerts</span><span class="tag cloud">Uptime checks for AI services</span>
+    </div>
+
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">GCP fundamentals. VPC, IAM, GCS. Deploy ARIA to Cloud Run. Free tier only. Set billing alert.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">K8s: K3s locally. ARIA as pods + HPA. Graduate to GKE Autopilot free tier. Add GPU node pool.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–9</div><div class="cx">Terraform: ARIA infra as code. Spot GPU instance for fine-tuning. Cost-per-inference dashboard.</div></div>
+      <div class="cell"><div class="cl">Weeks 10–12</div><div class="cx">Cloud observability: monitoring dashboards, billing alerts, serverless document ingestion pipeline.</div></div>
+    </div>
+    <div class="sl">Free cloud tiers</div>
+    <div class="tags">
+      <span class="tag cloud">GCP: $300 free credit + always-free tier</span>
+      <span class="tag cloud">AWS: 12-month free tier</span>
+      <span class="tag cloud">Azure: $200 student credit</span>
+      <span class="tag cloud">Qdrant Cloud: free 1GB cluster</span>
+      <span class="tag cloud">Pinecone: free starter tier</span>
+    </div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">Terraform</span><span class="tag tool">K3s / minikube</span><span class="tag tool">GKE Autopilot</span><span class="tag tool">Cloud Run</span><span class="tag tool">Helm</span><span class="tag tool">Infracost (cost estimation)</span><span class="tag tool">kubectl</span></div>
+    <div class="cap"><strong>ARIA v1.1 — Cloud Deployed:</strong> ARIA runs on GKE. Infra defined in Terraform. Document ingestion via Cloud Function trigger. Qdrant on Qdrant Cloud. Spot GPU for fine-tuning. Cost dashboard: $/1K queries visible at all times.</div>
+    <div class="pit"><strong>Pitfall:</strong> Cloud costs spiral silently. A misconfigured GPU instance left overnight can cost more than your monthly budget. Set billing alerts on day 1. Infracost before every terraform apply.</div>
+  </div>
+</div>
+
+<!-- P5 AGENTS -->
+<div class="card" data-p="p5">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#2a0d1a;color:#f472b6">Phase 5</span>
+    <span class="ct">Agent Engineering</span>
+    <span class="cm">Months 15–18</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">Now that ARIA is cloud-deployed and your RAG system is production-grade, you add autonomous agent capabilities on top. Agents built without cloud and RAG foundations produce brittle demos. This ordering means your agents are real from day one.</p>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">ReAct: Reason + Act loop</span><span class="tag">Tool calling / function calling</span><span class="tag">Task decomposition + planning</span><span class="tag">Memory: in-context vs external vs episodic</span><span class="tag">Reflection + self-critique loops</span><span class="tag">Multi-agent orchestration</span><span class="tag">Supervisor + worker patterns</span><span class="tag">Agent state machines</span><span class="tag">MCP (Model Context Protocol)</span><span class="tag">Tool allowlisting + sandboxing</span><span class="tag">Cloud infrastructure agents</span><span class="tag">Agent evaluation + benchmarking</span>
+    </div>
+    <div class="sl">Papers</div>
+    <div class="tags"><span class="tag paper">ReAct: Reason+Act (Yao 2022)</span><span class="tag paper">Toolformer (Schick 2023)</span><span class="tag paper">AgentBench benchmark</span></div>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">ReAct from scratch. Agent with sandboxed shell, file read, web search tools.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">LangGraph: stateful multi-agent workflows. Supervisor + worker. External memory via Qdrant.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–9</div><div class="cx">Cloud infra agent: restart GKE pods, read Cloud Logging, send alerts. Full audit trail.</div></div>
+      <div class="cell"><div class="cl">Weeks 10–12</div><div class="cx">Multi-agent: DevOps agent + RAG knowledge agent. LangSmith tracing. Agent eval suite.</div></div>
+    </div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">LangGraph</span><span class="tag tool">CrewAI</span><span class="tag tool">AutoGen</span><span class="tag tool">MCP SDK</span><span class="tag tool">LangSmith (tracing)</span><span class="tag tool">OpenTelemetry</span></div>
+    <div class="cap"><strong>ARIA v1.5 — Agentic Operations:</strong> Multi-agent system on GKE. DevOps agent monitors cloud infra. RAG agent answers queries from document store. Supervisor orchestrates both. Every action logged with immutable audit trail.</div>
+    <div class="pit"><strong>Pitfall:</strong> 95% reliable step × 10 steps = 60% end-to-end reliability. Agents compound errors. Always design for graceful degradation and human-in-the-loop fallbacks. Use scoped IAM roles — never give an agent full cloud credentials.</div>
+  </div>
+</div>
+
+<!-- P6 MLOPS -->
+<div class="card" data-p="p6">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#0a1f2a;color:#38bdf8">Phase 6</span>
+    <span class="ct">MLOps & AI Infrastructure</span>
+    <span class="cm">Months 18–20</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">The engineering discipline of running AI reliably at scale. Inference serving, GPU memory management, model registries, CI/CD for models. This is what separates engineers who can demo from engineers who can ship.</p>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">vLLM + PagedAttention</span><span class="tag">KV cache management</span><span class="tag">Dynamic batching</span><span class="tag">ONNX export + quantisation pipeline</span><span class="tag">Model registry (MLflow)</span><span class="tag">CI/CD for ML: eval gates on PRs</span><span class="tag">Distributed inference</span><span class="tag">Distributed training (DDP, FSDP concepts)</span><span class="tag">AI observability: token cost, drift, latency p99</span><span class="tag">Cost optimisation: spot + quantisation</span>
+    </div>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">vLLM on cloud GPU. Benchmark throughput vs Ollama. Understand PagedAttention.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">MLflow model registry. GitHub Actions: eval gate on every PR before model merge.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–8</div><div class="cx">Full observability stack: OTel + Prometheus + Grafana. Token cost, latency p99, GPU utilisation.</div></div>
+    </div>
+    <div class="sl">Tools</div>
+    <div class="tags"><span class="tag tool">vLLM</span><span class="tag tool">MLflow</span><span class="tag tool">ONNX Runtime</span><span class="tag tool">Triton Inference Server</span><span class="tag tool">Prometheus + Grafana</span><span class="tag tool">OpenTelemetry</span><span class="tag tool">GitHub Actions</span></div>
+    <div class="cap"><strong>ARIA v1.6:</strong> vLLM serving on cloud GPU. MLflow model registry. CI/CD with eval gates. Grafana: token cost, latency p99, agent task success rate, GPU utilisation.</div>
+    <div class="pit"><strong>Pitfall:</strong> A model that responds in 2s for 1 user can have 30s p99 latency under 50 concurrent users without batching configured. Understand KV cache and batching before any production deployment.</div>
+  </div>
+</div>
+
+<!-- P7 SECURITY -->
+<div class="card" data-p="p7">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#2a0a14;color:#f87171">Phase 7</span>
+    <span class="ct">AI Security — Defensive Architecture & Red Teaming</span>
+    <span class="cm">Months 20–21</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">AI introduces attack surfaces that don't exist in traditional software. Prompt injection, tool hijacking, data poisoning — real threats in production today. This phase teaches defensive reasoning through attack understanding: not exploitation, but comprehension.</p>
+    <div class="sl">Concepts</div>
+    <div class="tags">
+      <span class="tag">Prompt injection: direct vs indirect</span><span class="tag">Tool call hijacking in agents</span><span class="tag">Model inversion risks</span><span class="tag">Supply chain: model poisoning</span><span class="tag">Input validation for LLM pipelines</span><span class="tag">Output filtering + guardrails</span><span class="tag">Allowlists for tool actions</span><span class="tag">Least-privilege agent IAM (cloud)</span><span class="tag">OWASP LLM Top 10</span><span class="tag">Red teaming methodology</span><span class="tag">Adversarial input detection</span><span class="tag">Immutable audit logs</span>
+    </div>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Weeks 1–3</div><div class="cx">OWASP LLM Top 10 study. Reproduce each attack class in sandboxed environment. Document mitigations.</div></div>
+      <div class="cell"><div class="cl">Weeks 4–6</div><div class="cx">Red team ARIA: attempt prompt injection via every endpoint. Add Guardrails AI defences. Re-test.</div></div>
+      <div class="cell"><div class="cl">Weeks 7–8</div><div class="cx">ARIA threat model document. Architecture review vs OWASP LLM checklist. Security dashboard.</div></div>
+    </div>
+    <div class="sl">Key resource</div>
+    <div class="tags"><span class="tag tool">OWASP LLM Top 10 (owasp.org)</span><span class="tag tool">Garak LLM vuln scanner (GitHub)</span><span class="tag tool">Guardrails AI</span><span class="tag tool">NeMo Guardrails</span><span class="tag tool">Rebuff (prompt injection detection)</span></div>
+    <div class="cap"><strong>ARIA v1.7:</strong> Passes OWASP LLM Top 10 checklist. Tool calls through allowlist validator. Every agent action + RAG retrieval in immutable audit log. Threat model published. Red team report: findings + mitigations.</div>
+    <div class="pit"><strong>Pitfall:</strong> Indirect prompt injection — a malicious instruction embedded in a retrieved document — is harder to defend than direct attacks. Your agent's tool outputs are untrusted inputs. Always.</div>
+  </div>
+</div>
+
+<!-- P8 ARCHITECTURE -->
+<div class="card" data-p="p8">
+  <div class="ch" onclick="tog(this)">
+    <span class="badge" style="background:#0f2a0a;color:#86efac">Phase 8</span>
+    <span class="ct">AI Solutions Architecture — Integration & Career</span>
+    <span class="cm">Months 21–24</span>
+    <span class="cv">▼</span>
+  </div>
+  <div class="cb">
+    <p class="p">You've built skills across every layer. Now you learn to communicate architectural decisions at enterprise level, evaluate tradeoffs under real constraints (cost, latency, compliance), and position yourself professionally as an AI Solutions Architect.</p>
+    <div class="sl">Architecture skills</div>
+    <div class="tags">
+      <span class="tag">Make vs buy vs fine-tune decisions</span><span class="tag">Cost modelling: latency / throughput / price</span><span class="tag">Multi-tenant AI system design</span><span class="tag">Hybrid cloud / on-prem AI design</span><span class="tag">Enterprise AI governance</span><span class="tag">Evaluation-driven development</span><span class="tag">AI SLAs + reliability engineering</span><span class="tag">Architecture Decision Records (ADRs)</span><span class="tag">Model cards + datasheets</span><span class="tag">Data flywheel design</span><span class="tag">RAG system design for regulated industries</span>
+    </div>
+    <div class="sl">Advanced research to track</div>
+    <div class="tags">
+      <span class="tag paper">World models (LeCun's JEPA)</span><span class="tag paper">Mamba / SSM architectures</span><span class="tag paper">Test-time compute scaling</span><span class="tag paper">Constitutional AI (Anthropic)</span><span class="tag paper">Multimodal reasoning (Gemini)</span><span class="tag paper">AI agents for software engineering</span>
+    </div>
+    <div class="sl">Weekly structure</div>
+    <div class="grid">
+      <div class="cell"><div class="cl">Months 21–22</div><div class="cx">Design AI systems for 5 verticals: healthcare, fintech, legal, DevOps, e-commerce. Document tradeoffs per vertical.</div></div>
+      <div class="cell"><div class="cl">Months 22–23</div><div class="cx">ARIA v2.0: multi-tenant, per-tenant model routing, cost tracking, isolated agent sandboxes.</div></div>
+      <div class="cell"><div class="cl">Month 24</div><div class="cx">3 ADRs. Open-source contribution. 3 blog posts. Interview prep for AI Solutions Architect roles.</div></div>
+    </div>
+    <div class="sl">How to stay current</div>
+    <div class="tags">
+      <span class="tag tool">arXiv (cs.AI, cs.LG)</span><span class="tag tool">Papers With Code newsletter</span><span class="tag tool">HuggingFace blog</span><span class="tag tool">Simon Willison's weblog</span><span class="tag tool">Latent Space podcast</span><span class="tag tool">The Gradient</span>
+    </div>
+    <div class="sl">Portfolio targets — Month 24</div>
+    <div class="tags">
+      <span class="tag ms">ARIA v2.0 — full production system on GitHub</span>
+      <span class="tag ms">5 AI system design docs (5 verticals)</span>
+      <span class="tag ms">3 Architecture Decision Records</span>
+      <span class="tag ms">RAGAS evaluation report</span>
+      <span class="tag ms">Red team + threat model report</span>
+      <span class="tag ms">Terraform infrastructure repo</span>
+      <span class="tag ms">Open-source contribution</span>
+      <span class="tag ms">3+ technical blog posts</span>
+    </div>
+    <div class="cap"><strong>ARIA v2.0 — Production Enterprise AI Platform:</strong> Multi-tenant. Per-tenant LLM routing. Production RAG handling 20K+ docs. Multi-agent ops on GKE. Full observability. OWASP-hardened. CI/CD with eval gates. Terraform infra. .NET frontend + Python orchestration. Architecture diagram, threat model, model cards, runbook, cost dashboard. This is your interview centrepiece.</div>
+  </div>
+</div>
+
+<script>
+function tog(h){
+  const b=h.nextElementSibling,c=h.querySelector('.cv');
+  const o=b.classList.contains('open');
+  b.classList.toggle('open',!o);
+  c.classList.toggle('open',!o);
+}
+function show(f,btn){
+  document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display=(f==='all'||c.dataset.p===f)?'block':'none';
+  });
+}
+document.querySelector('.ch').click();
+</script>
+</body>
+</html>
