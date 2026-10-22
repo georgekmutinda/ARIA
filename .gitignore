@@ -17,3 +17,6 @@ __pycache__/
 # OS database artifacts
 .DS_Store
 Thumbs.db
+# Downloaded training datasets
+/data/FashionMNIST/
+/checkpoints/data/FashionMNIST/
