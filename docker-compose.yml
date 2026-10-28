@@ -36,6 +36,22 @@ services:
     volumes:
       - minio_data:/data
 
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: aria-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
 volumes:
   postgres_data:
   minio_data:
+  qdrant_data:
+    name: aria_qdrant_data
+    external: true
+
+
+
+
